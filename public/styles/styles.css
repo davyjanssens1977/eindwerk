@@ -552,3 +552,8 @@ textarea:focus {
 .inline {
     display: inline;
 }
+
+/*  USER MENU */
+.usermenu-left {
+    margin-left: 8rem;
+}
