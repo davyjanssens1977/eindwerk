@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,6 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [Homecontroller::class, 'index'])->name('home.index');
 
 Route::get('/home/activiteiten', [Homecontroller::class, 'activiteiten'])->name('home.activiteiten');
-
-Route::get('/home/blog', [Homecontroller::class, 'blog'])->name('home.blog');
-
-
 
 Route::get('/posts/index', [PostsController::class, 'index'])->name('posts.index');
 
@@ -52,3 +49,9 @@ Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->mi
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit')->middleware('auth');
 Route::put('/profile/edit/email', [ProfileController::class, 'updateEmail'])->name('profile.update-email')->middleware('auth');
 Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'])->name('profile.update-password')->middleware('auth');
+
+
+// Blog
+Route::get('/home/listings', function() {
+    return view('listings');
+});

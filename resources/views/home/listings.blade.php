@@ -15,7 +15,7 @@
 <div class="container-small">
     <h1 class="center-content heading1">Blog</h1>
     <div class="container-grid">
-       <h1></h1>
+       <h1>Listings</h1>
     </div>
 </div>
 
