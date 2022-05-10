@@ -11,7 +11,7 @@
                 <a href="{{ route('home.activiteiten') }}">Activiteiten</a>
             </li>
             <li><a href="#">Foto's</a></li>
-            <li><a href="#">Blog</a></li>
+            <li class="{{ (request()->Is('home/listings')) ? 'active-btn' : ''}}"class="{{ (request()->Is('home/listings')) ? 'active-btn' : ''}}"><a href="{{ route('home.listings') }}">Blog</a></li>
             <li class="{{ (request()->Is('contact/contact')) ? 'active-btn' : ''}}">
                 <a href="{{ route('contact.contact') }}">Contact</a>
             </li>

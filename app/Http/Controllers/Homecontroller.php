@@ -15,6 +15,8 @@ class Homecontroller extends Controller
         return view('home.activiteiten');
     }
 
-   
+//    public function listings() {
+//        return view('home.listings');
+//    }
 }
  
