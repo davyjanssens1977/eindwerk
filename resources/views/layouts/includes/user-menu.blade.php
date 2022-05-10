@@ -9,7 +9,7 @@
                   </span>
             </div>
             <div class="usermenu-right orange">
-                <a href="#">
+                <a href="{{ route('profile.edit') }}">
                     <i class="fa-solid fa-user-pen"></i>
                     <span class="text-[#F79012]">Wijzig profiel</span>
                 </a>&nbsp;

@@ -298,6 +298,11 @@ a:hover {
     margin: 0 auto;
 }
 
+.container-small-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
 .bg-container {
     background: #e4eff5;
     padding: 2rem 0 2rem 0;
