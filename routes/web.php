@@ -23,6 +23,10 @@ Route::get('/', [Homecontroller::class, 'index'])->name('home.index');
 
 Route::get('/home/activiteiten', [Homecontroller::class, 'activiteiten'])->name('home.activiteiten');
 
+Route::get('/home/listings', [Homecontroller::class, 'listings'])->name('home.listings');
+
+Route::get('/home/listings/{id}', [Homecontroller::class, 'listings']);
+
 Route::get('/posts/index', [PostsController::class, 'index'])->name('posts.index');
 
 Route::get('/contact/contact', [ContactController::class, 'contact'])->name('contact.contact');
@@ -52,19 +56,19 @@ Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'
 
 
 // Blog
-Route::get('/home/listings', function(){
-    return view('listings', [
-        'heading' => 'Latest Listings',
-        'listings' => Listing::all()
-    ]);
-});
+// Route::get('/home/listings', function(){
+// //     return view('home.listings', [
+// //         'heading' => 'Latest Listings',
+// //         'listings' => Listing::all()
+// //     ]);
+// // });
 
 
-// single Listing
-Route::get('/home/listings/{id}', function($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
-    ]);
-});
+// single Blog
+// Route::get('/home/listings/{id}', function($id) {
+//     return view('home.listing', [
+//         'listing' => Listing::find($id)
+//     ]);
+// });
 
 
