@@ -20,21 +20,7 @@
     <div class="container-grid">
         <div class="content-left">
             <h1 class="heading1">CONTACTFORMULIER</h1>
-                      <form method="POST">
-                          @csrf
-                          <div class="formulier_container">
-                             
-                                <input type="text" name="naam" id="naam" placeholder="Uw naam" value="{{ old('naam') }}" required>
-                                <span class="error" id="naam_error"></span> 
-                                <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Uw telefoonnummer" value="{{ old('telefoonnummer') }}" required> 
-                                <span class="error" id="telefoonnummer_error"></span> 
-                                <input type="email" name="email" id="email" placeholder="Uw E-mail" value="{{ old('email') }}"required>
-                                <span class="error" id="email_error"></span>
-                                <textarea name="opmerking" id="opmerking" cols="100" rows="10" placeholder="Opmerkingen"></textarea><br>
-                                <input type="button" class="bg-[#F79012] text-[white] p-2 rounded-md" value="Verstuur uw vraag" id="knop_verstuur" value="{{ old('naam') }}" onclick="verstuur()" />
-                         
-                          </div>
-                      </form>
+            @include('contact.includes.form')      
          </div>
        
         <div class="right">
