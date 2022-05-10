@@ -31,7 +31,7 @@
 					<li><a href="{{ route('home.index') }}">Home</a></li>
 					<li><a href="{{ route('home.activiteiten') }}">Activiteiten</a></li>
 					<li><a href="#">Foto's</a></li>
-					<li><a href="{{ route('home.blog') }}">Blog</a></li>
+					<li><a href="#">Blog</a></li>
 					<li><a href="{{ route('contact.contact') }}">Contact</a></li>
 				</ul>
 			</div>

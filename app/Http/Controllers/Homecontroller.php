@@ -15,8 +15,6 @@ class Homecontroller extends Controller
         return view('home.activiteiten');
     }
 
-    public function blog() {
-        return view('home.blog');
-    }
+   
 }
  

@@ -52,6 +52,10 @@ Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'
 
 
 // Blog
-Route::get('/home/listings', function() {
-    return view('listings');
+Route::get('/listings', function() {
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' => Listing::all()
+    ]);
+
 });

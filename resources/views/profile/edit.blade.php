@@ -1,6 +1,6 @@
 @extends('layouts.subpages')
 
-@section('title', 'Registreren')
+@section('title', 'Wijzig profielgegevens')
 
 @section('title', 'Update mijn profiel')
 
