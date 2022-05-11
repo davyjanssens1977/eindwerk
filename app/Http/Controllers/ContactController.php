@@ -17,10 +17,10 @@ class ContactController extends Controller
             'naam' => 'required',
             'telefoonnummer' => 'required',
             'email' => 'required|email',
-            'opmerkingen' => 'required|min:50'
+            'opmerkingen' => 'required|min:20'
         ]);
 
-        Mail::to('test@test.be')
+        Mail::to('info@vzwwiebe.be')
         ->send(new ContactMessageSent($request->only(['naam', 'telefoonnummer', 'email', 'opmerkingen'])));
 
         return back()->with('status', 'Je bericht is verstuurd.');
