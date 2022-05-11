@@ -54,6 +54,11 @@ Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'
 
 
 // Show Create Form
+Route::get('/home/create', [Homecontroller::class, 'create']);
+
+// Store Blog
+Route::post('/home/listings', [Homecontroller::class, 'store']);
+
 
 
 

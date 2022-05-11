@@ -25,10 +25,17 @@
        @foreach($listings as $listing)
             <x-listing-card :listing="$listing" />
        @endforeach
-
+       
        @else
        <p>Er zijn momenteel geen blogberichten</p>
        @endunless
+    </div>
+    <div class="center-content ">
+        <a href="/home/create" class="text-center bg-[#F79012] text-white p-2 rounded-md mb-12">Voeg een blogpost toe</a>
+    </div>
+
+    <div class="mt-6 p-4">
+        {{ $listings->links() }}
     </div>
 </div>
 

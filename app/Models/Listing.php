@@ -9,6 +9,8 @@ class Listing extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['naam', 'titel', 'tags', 'bericht'];
+
     public function scopeFilter($query, array $filters){
         if($filters['tag'] ?? false){
             $query->where('tags', 'like', '%' .request('tag') . '%');

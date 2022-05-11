@@ -7,6 +7,7 @@
         <title>@yield('title') - VZW Wiebe Bree</title>
         <link rel="icon" href="images/favicon.ico" />
         <script src="/js/hero.js" type="text/javascript"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
         <link rel="stylesheet" href="/styles/styles.css">
         <link
             rel="stylesheet"
@@ -30,12 +31,22 @@
  
     </head>
     <body>
+
+        @if(session()->has('message'))
+            <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show" class="fixed top-0 left-1/2 transform -translate-x-1/2 bg-[#F79012] text-white px-48 py-3">
+                <p>
+                    {{ session('message') }}
+                </p>
+            </div>
+        @endif
+
         @include('layouts.includes.user-menu')
         @include('layouts.includes.nav')
      
              <div class="container-content">
                  @yield('content')
              </div>
+
          @include('layouts.includes.footer')
      
          @include('layouts.includes.copyright')
