@@ -27,8 +27,11 @@ Route::get('/home/listings', [Homecontroller::class, 'listings'])->name('home.li
 
 Route::get('/posts/index', [PostsController::class, 'index'])->name('posts.index');
 
-Route::get('/contact/contact', [ContactController::class, 'contact'])->name('contact.contact');
 
+// contact
+Route::get('/contact', [ContactController::class, 'contact']);
+
+Route::post('/contact', [ContactController::class, 'verzenden']);
  
 //Register
 Route::get('/register', [UserController::class, 'create']);
@@ -37,7 +40,7 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/users', [UserController::class, 'store']);
 
 // Log User out
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // Show login form
 Route::get('/login', [UserController::class, 'login'])->name('login');
@@ -54,13 +57,19 @@ Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'
 
 
 // Show Create Form
-Route::get('/home/create', [Homecontroller::class, 'create']);
+Route::get('/home/create', [Homecontroller::class, 'create'])->middleware('auth');
 
 // Store Blog
-Route::post('/home/listings', [Homecontroller::class, 'store']);
+Route::post('/home/listings', [Homecontroller::class, 'store'])->middleware('auth');
 
 // Show edit form
-Route::get('/home/listings/{listing}/edit', [homecontroller::class, 'edit']);
+Route::get('/home/listings/{listing}/edit', [homecontroller::class, 'edit'])->middleware('auth');
+
+// Update blog
+Route::put('/home/listings/{listing}', [homecontroller::class, 'update'])->middleware('auth');
+
+// Delete blog
+Route::delete('/home/listings/{listing}', [homecontroller::class, 'destroy'])->middleware('auth');
 
 
 

@@ -20,9 +20,17 @@
 
        
     </div>
+    @auth
      <div>
             <a href="/home/listings/{{ $listing->id }}/edit">
             <i class="fa-solid fa-pencil"></i> Edit
             </a>
+
+            <form method="POST" action="/home/listings/{{ $listing->id }}">
+            @csrf
+            @method('DELETE')
+            <button class="text-[#F79012]"><i class="fa-solid fa-trash"></i> Delete</button>
+            </form>
     </div>
+    @endauth
 </div>

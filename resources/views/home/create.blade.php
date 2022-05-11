@@ -84,8 +84,8 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="bericht"
                                 rows="10"
-                                placeholder="Uw blogpost" value="{{ old('bericht') }}"
-                            ></textarea>
+                                placeholder="Uw blogpost" 
+                            >{{ old('bericht') }}</textarea>
                             @error('bericht')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror

@@ -54,7 +54,7 @@
                     type="submit"
                     class="bg-[#F79012] text-[white] p-2 rounded-md"
                 >
-                    Inschijven
+                    Login
                 </button>
             </div>
 

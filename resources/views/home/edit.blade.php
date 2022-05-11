@@ -92,8 +92,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="bericht"
                                 rows="10"
-                                placeholder="Uw blogpost" value="{{ $listing->bericht }}"
-                            ></textarea>
+                                placeholder="Uw blogpost">{{ $listing->bericht }}</textarea>
                             @error('bericht')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
@@ -103,7 +102,7 @@
                             <button
                                 class="bg-[#F79012] text-[white] p-2 rounded-md"
                             >
-                                Voeg blogpost toe
+                                Update blogpost 
                             </button>
 
                             <a href="/home/listings" class="text-black ml-4"><i class="fa-solid fa-circle-arrow-left"></i> Terug naar blogposts </a>

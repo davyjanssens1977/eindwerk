@@ -50,5 +50,31 @@ class Homecontroller extends Controller
        return view('home.edit', ['listing' => $listing]);
    }
 
+
+      // Update Blog
+      public function update(Request $request, Listing $listing) {
+        $formFields = $request->validate([
+            'naam' => 'required',
+            'titel' => 'required',
+            'tags' => 'required',
+            'bericht' => 'required'
+        ]);
+
+        if($request->hasFile('foto')) {
+            $formFields['foto'] = $request->file('foto')->store('fotos', 'public');
+        }
+
+        $listing->update($formFields);
+
+        return back()->with('message', 'Blogpost succesvol geupdate!');
+   }
+
+
+   // Delete blog
+   public function destroy(Listing $listing){
+        $listing->delete();
+        return redirect('/home/listings')->with('message', 'Blog is succcesvol verwijderd');
+   }
+
 }
  
