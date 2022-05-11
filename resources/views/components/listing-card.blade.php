@@ -4,7 +4,7 @@
     <div class="flex">
         <img
             class="hidden w-48 mr-6 md:block"
-            src="{{ $listing->foto ? asset('storage/' . $listing->foto) : asset('/images/no-image.png') }}"
+            src="{{ $listing->foto ? asset('storage/' . $listing->foto) : asset('../images/no-image.png') }}"
             alt=""
         />
         <div>
@@ -17,5 +17,12 @@
                {{ $listing->bericht }}
             </div>
         </div>
+
+       
+    </div>
+     <div>
+            <a href="/home/listings/{{ $listing->id }}/edit">
+            <i class="fa-solid fa-pencil"></i> Edit
+            </a>
     </div>
 </div>

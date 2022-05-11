@@ -45,5 +45,10 @@ class Homecontroller extends Controller
         return redirect('/home/listings')->with('message', 'Blogpost succesvol toegevoegd!');
    }
 
+   // Show edit form 
+   public function edit(Listing $listing) {
+       return view('home.edit', ['listing' => $listing]);
+   }
+
 }
  

@@ -59,6 +59,9 @@ Route::get('/home/create', [Homecontroller::class, 'create']);
 // Store Blog
 Route::post('/home/listings', [Homecontroller::class, 'store']);
 
+// Show edit form
+Route::get('/home/listings/{listing}/edit', [homecontroller::class, 'edit']);
+
 
 
 
