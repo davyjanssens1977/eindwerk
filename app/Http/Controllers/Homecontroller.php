@@ -18,17 +18,9 @@ class Homecontroller extends Controller
 
    public function listings() {
     return view('home.listings', [
-        'heading' => 'Laatste Blogberichten',
-        'listings' => Listing::all()
+        'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
     ]);
    }
 
-   public function listing($id) {
-    return view('home.listing', [
-        'listing' => Listing::find($id)
-    ]);
-   }
-
-   
 }
  
