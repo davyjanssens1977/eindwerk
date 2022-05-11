@@ -25,8 +25,6 @@ Route::get('/home/activiteiten', [Homecontroller::class, 'activiteiten'])->name(
 
 Route::get('/home/listings', [Homecontroller::class, 'listings'])->name('home.listings');
 
-Route::get('/home/listings/{id}', [Homecontroller::class, 'listings']);
-
 Route::get('/posts/index', [PostsController::class, 'index'])->name('posts.index');
 
 Route::get('/contact/contact', [ContactController::class, 'contact'])->name('contact.contact');
@@ -55,20 +53,7 @@ Route::put('/profile/edit/email', [ProfileController::class, 'updateEmail'])->na
 Route::put('/profile/edit/password', [ProfileController::class, 'updatePassword'])->name('profile.update-password')->middleware('auth');
 
 
-// Blog
-// Route::get('/home/listings', function(){
-// //     return view('home.listings', [
-// //         'heading' => 'Latest Listings',
-// //         'listings' => Listing::all()
-// //     ]);
-// // });
+// Show Create Form
 
-
-// single Blog
-// Route::get('/home/listings/{id}', function($id) {
-//     return view('home.listing', [
-//         'listing' => Listing::find($id)
-//     ]);
-// });
 
 
