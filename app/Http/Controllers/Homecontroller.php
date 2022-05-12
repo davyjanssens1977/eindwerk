@@ -16,6 +16,10 @@ class Homecontroller extends Controller
         return view('home.activiteiten');
     }
 
+    public function privacybeleid() {
+        return view('home.privacybeleid');
+    }
+
    public function listings() {
     return view('home.listings', [
         'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(6)

@@ -11,9 +11,11 @@
                 <b>Vzw - Wiebe - Bree</b> is een vereniging die instaat voor het organiseren van een 
                 integratievakantie en allerhande activiteiten tussen kansarme en kansrijke kinderen.
              </p>
-             <button class="btn-content">INSCHRIJVEN</button>
+             <a href="/contact" class="btn-content mt-10">
+                Heeft u vragen? Stuur ons uw vraag!  <i class="fa-solid fa-circle-arrow-right"></i>
+            </a>
         </div>
-        <div class="content-right">
+        <div class="content-right sponsor">
             <h1 class="heading1">SPONSORING</h1>
             <h3>BE 50 - 7350 - 1594 - 0118</h3>
             <p class="italic">Vanaf €40 fiscaal aftrekbaar</p>

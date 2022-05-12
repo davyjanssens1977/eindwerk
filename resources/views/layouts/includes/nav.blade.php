@@ -13,7 +13,7 @@
             {{-- <li><a href="#">Foto's</a></li> --}}
             <li class="{{ (request()->Is('home/listings')) ? 'active-btn' : ''}}">
                 <a href="{{ route('home.listings') }}">Blog</a></li>
-            <li class="{{ (request()->Is('contact/contact')) ? 'active-btn' : ''}}">
+            <li class="{{ (request()->Is('contact')) ? 'active-btn' : ''}}">
                 <a href="/contact">Contact</a>
             </li>
         </ul>

@@ -3,7 +3,7 @@
 @section('title', 'Blog')
 
 @section('content')
-<section class="hero-body row header2">
+<section class="hero-body row header4">
     <div class="content row">
         <div class="hero-text">
             <h1 class="heading1">Blog</h1>

@@ -30,7 +30,6 @@
 				<ul>
 					<li><a href="{{ route('home.index') }}">Home</a></li>
 					<li><a href="{{ route('home.activiteiten') }}">Activiteiten</a></li>
-					<li><a href="#">Foto's</a></li>
 					<li><a href="{{ route('home.listings') }}">Blog</a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>

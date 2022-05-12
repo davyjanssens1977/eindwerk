@@ -71,6 +71,11 @@ Route::put('/home/listings/{listing}', [homecontroller::class, 'update'])->middl
 // Delete blog
 Route::delete('/home/listings/{listing}', [homecontroller::class, 'destroy'])->middleware('auth');
 
+// Privacybeleid
+Route::get('/privacybeleid', [homecontroller::class, 'privacybeleid'])->name('home.privacybeleid');
+
+Route::post('/contact', [Contact])
+
 
 
 

@@ -132,6 +132,11 @@ a {
         url(../images/kansarme-kinderen5.jpg);
 }
 
+.header4 {
+    background: linear-gradient(#1691b2 2%, rgba(22, 145, 178, 0.1) 90%),
+        url(../images/header3.jpg);
+}
+
 .hero-text {
     margin-top: -150px;
     text-align: center;
@@ -355,7 +360,7 @@ a:hover {
     text-align: center;
     margin-bottom: 4rem;
     margin-top: 2rem;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 .italic {
@@ -482,6 +487,26 @@ a:hover {
     .footer-col {
         width: 100%;
     }
+
+    .container-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-col h1::before {
+        width: 100%;
+    }
+
+    .center {
+        margin-left: 0;
+    }
+
+    .copyright {
+        height: 80px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -561,4 +586,10 @@ textarea:focus {
 /*  USER MENU */
 .usermenu-left {
     margin-left: 8rem;
+}
+
+/* CLIENT SIDE VALIDATION WITH PARSLEY */
+.parsley-errors-list li {
+    list-style: none;
+    color: red;
 }

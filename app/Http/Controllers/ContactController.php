@@ -17,12 +17,18 @@ class ContactController extends Controller
             'naam' => 'required',
             'telefoonnummer' => 'required',
             'email' => 'required|email',
-            'opmerkingen' => 'required|min:20'
+            'opmerking' => 'required|min:20'
         ]);
 
-        Mail::to('info@vzwwiebe.be')
-        ->send(new ContactMessageSent($request->only(['naam', 'telefoonnummer', 'email', 'opmerkingen'])));
+        Mail::to('info@vzw-wiebe-bree.be')
+        ->send(new ContactMessageSent($request->only(['naam', 'telefoonnummer', 'email', 'opmerking'])));
 
-        return back()->with('status', 'Je bericht is verstuurd.');
+        return back()->with('status', 'Uw bericht is succesvol verzonden!');
     }
+
+    public function contactSubmit(Request $request)
+ {
+    return "Formulier is succesvol verzonden";
+ }
+
 }
