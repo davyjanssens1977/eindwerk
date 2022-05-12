@@ -74,7 +74,7 @@ Route::delete('/home/listings/{listing}', [homecontroller::class, 'destroy'])->m
 // Privacybeleid
 Route::get('/privacybeleid', [homecontroller::class, 'privacybeleid'])->name('home.privacybeleid');
 
-Route::post('/contact', [Contact])
+
 
 
 
