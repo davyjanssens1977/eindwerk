@@ -7,9 +7,9 @@
                         <button type='submit'>
                             <i class="fa-solid fa-door"></i>Logout
                         </button>
-                    </form></p>
+                    </form> | <a class="register" href="/register">Registreren</a></p>
                 @else  
-                <a class="login" href="/login">Login</a> | <a class="register" href="/register">Registreren</a></p>
+                <a class="login" href="/login">Login</a> 
 
                @endauth
     </div>

@@ -58,14 +58,7 @@
                 </button>
             </div>
 
-            <div class="mt-8">
-                <p>
-                    Heeft u nog geen account?
-                    <a href="/register" class="text-laravel text-[#F79012]"
-                        >Registreer</a
-                    >
-                </p>
-            </div>
+         
         </form>
     </div>
 </div>

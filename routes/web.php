@@ -34,7 +34,7 @@ Route::get('/contact', [ContactController::class, 'contact']);
 Route::post('/contact', [ContactController::class, 'verzenden']);
  
 //Register
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('auth');
 
 // Create new user
 Route::post('/users', [UserController::class, 'store']);
