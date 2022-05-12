@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,8 @@ Route::delete('/home/listings/{listing}', [homecontroller::class, 'destroy'])->m
 
 // Privacybeleid
 Route::get('/privacybeleid', [homecontroller::class, 'privacybeleid'])->name('home.privacybeleid');
+
+
 
 
 
