@@ -9,6 +9,7 @@
         <script src="/js/hero.js" type="text/javascript"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
         <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -16,6 +17,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -50,6 +52,12 @@
          @include('layouts.includes.footer')
      
          @include('layouts.includes.copyright')
-     
+         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+            AOS.init({
+                offset: 200,
+                duration: 1000
+              });
+          </script>
      </body>
      </html>

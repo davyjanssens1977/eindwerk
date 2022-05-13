@@ -5,7 +5,7 @@
 @section('content')
 <section class="hero-body row header4">
     <div class="content row">
-        <div class="hero-text">
+        <div class="hero-text animate__animated animate__zoomIn">
             <h1 class="heading1">Blog</h1>
             <p>Vzw Wiebe</p>
         </div>

@@ -79,6 +79,7 @@ class Homecontroller extends Controller
         $listing->delete();
         return redirect('/home/listings')->with('message', 'Blog is succcesvol verwijderd');
    }
+   
 
 }
  

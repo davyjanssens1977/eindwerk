@@ -5,7 +5,7 @@
 @section('content')
 <section class="hero-body row header3">
     <div class="content row">
-        <div class="hero-text">
+        <div class="hero-text animate__animated animate__zoomIn">
             <h1 class="heading1">Contacteer</h1>
             <p>Vzw Wiebe</p>
         </div>
@@ -18,12 +18,12 @@
         Het inzetten voor een betere wereld, daar staat vzw Wiebe voor. We richten ons op het steunen van verschillende maatschappelijke projecten, waarbij we speciaal aandacht geven aan projecten op het gebied van armoedebestrijding, integratie en educatie.
      </p>
     <div class="container-grid">
-        <div class="content-left">
+        <div class="content-left" data-aos="fade-right">
             <h1 class="heading1">CONTACTFORMULIER</h1>
             @include('contact.includes.form')      
          </div>
        
-        <div class="right">
+        <div class="right" data-aos="fade-left">
             <div class="bodycontact_container">
                 <h1 class="heading1">CONTACTEER ONS</h1>
               <ul class="bodyadres_container">

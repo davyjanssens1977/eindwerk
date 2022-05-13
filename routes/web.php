@@ -77,6 +77,7 @@ Route::get('/privacybeleid', [homecontroller::class, 'privacybeleid'])->name('ho
 
 
 
+ 
 
 
 

@@ -1,7 +1,7 @@
 @props(['listing'])
 
 <div class="bg-gray-50 border border-gray-200 rounded p-6">
-    <div class="flex">
+    <div class="flex" data-aos="flip-down">
         <img
             class="hidden w-48 mr-6 md:block"
             src="{{ $listing->foto ? asset('storage/' . $listing->foto) : asset('../images/no-image.png') }}"

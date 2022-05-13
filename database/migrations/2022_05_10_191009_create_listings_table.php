@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('listings', function (Blueprint $table) {
-            $table->id();
+            $table->id();        
             $table->string('titel');
             $table->string('foto')->nullable();
             $table->string('tags');
